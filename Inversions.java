@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Inversions {
 
-    private static boolean debug = true;
+    private static boolean debug = false;
     private static class InvertedList {
         List<Integer> list;
         int numInversions;
@@ -20,14 +20,6 @@ public class Inversions {
 
         public int getNumInversions() {
             return numInversions;
-        }
-
-        public void setList(ArrayList<Integer> list) {
-            this.list = list;
-        }
-
-        public void setNumInversions(int numInversions) {
-            this.numInversions = numInversions;
         }
     }
 
