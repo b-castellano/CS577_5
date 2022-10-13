@@ -43,7 +43,7 @@ public class Inversions {
         int indexB = 0;
 
         while(indexA < A.size() && indexB < B.size()){
-            if(A.get(indexA) < B.get(indexB)){
+            if(A.get(indexA) <= B.get(indexB)){
                 S.add(A.get(indexA));
                 indexA += 1;
             }
