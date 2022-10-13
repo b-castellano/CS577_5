@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Inversions {
 
-    private static final boolean debug = false;
+    private static final boolean debug = true;
     private static class InvertedList {
         List<Integer> list;
         int numInversions;
