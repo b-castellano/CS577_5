@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Inversions {
 
-    private static boolean debug = false;
+    private static final boolean debug = false;
     private static class InvertedList {
         List<Integer> list;
         int numInversions;
@@ -26,12 +26,6 @@ public class Inversions {
     public static InvertedList CountSort(List<Integer> list){
         if(list.size() == 1){
             return new InvertedList(list, 0);
-        }
-
-        if(debug){
-            System.out.println("list: " + list);
-            System.out.println("lower: " + list.subList(0, list.size() / 2));
-            System.out.println("upper: " + list.subList((list.size() / 2), list.size()));
         }
 
         InvertedList lower = CountSort(list.subList(0, list.size() / 2));
@@ -83,6 +77,9 @@ public class Inversions {
             ArrayList<Integer> list = new ArrayList<>();
             for(int j = 0; j < numElements; j += 1){
                 list.add(in.nextInt());
+            }
+            if(debug){
+                System.out.println("list: " + list);
             }
             System.out.println(CountSort(list).getNumInversions());
         }
